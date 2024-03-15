@@ -1,0 +1,1491 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Param..Create(BaseForm)
+Gui.F_Param..Caption("Excess Inventory")
+Gui.F_Param..Size(665,542)
+Gui.F_Param..MinX(0)
+Gui.F_Param..MinY(0)
+Gui.F_Param..Position(0,0)
+Gui.F_Param..AlwaysOnTop(False)
+Gui.F_Param..FontName("Tahoma")
+Gui.F_Param..FontSize(8.25)
+Gui.F_Param..ControlBox(True)
+Gui.F_Param..MaxButton(True)
+Gui.F_Param..MinButton(True)
+Gui.F_Param..MousePointer(0)
+Gui.F_Param..Moveable(True)
+Gui.F_Param..Sizeable(True)
+Gui.F_Param..ShowInTaskBar(True)
+Gui.F_Param..TitleBar(True)
+Gui.F_Param..Event(UnLoad,F_Param_UnLoad)
+Gui.F_Param.frame1.Create(Frame)
+Gui.F_Param.frame1.Enabled(True)
+Gui.F_Param.frame1.Visible(True)
+Gui.F_Param.frame1.Zorder(0)
+Gui.F_Param.frame1.Size(255,500)
+Gui.F_Param.frame1.Position(9,3)
+Gui.F_Param.frame1.Caption("")
+Gui.F_Param.frame1.FontName("Tahoma")
+Gui.F_Param.frame1.FontSize(8.25)
+Gui.F_Param.lbl1.Create(Label,"Component #",True,66,13,0,5,187,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Param.lbl1.BorderStyle(0)
+Gui.F_Param.lbl1.Parent("frame1")
+Gui.F_Param.txtComponent.Create(TextboxM)
+Gui.F_Param.txtComponent.Enabled(True)
+Gui.F_Param.txtComponent.Visible(True)
+Gui.F_Param.txtComponent.Zorder(0)
+Gui.F_Param.txtComponent.Size(238,70)
+Gui.F_Param.txtComponent.Position(4,205)
+Gui.F_Param.txtComponent.FontName("Tahoma")
+Gui.F_Param.txtComponent.FontSize(8.25)
+Gui.F_Param.txtComponent.Parent("frame1")
+Gui.F_Param.cmdClearPart.Create(Button)
+Gui.F_Param.cmdClearPart.Enabled(True)
+Gui.F_Param.cmdClearPart.Visible(True)
+Gui.F_Param.cmdClearPart.Zorder(0)
+Gui.F_Param.cmdClearPart.Size(75,15)
+Gui.F_Param.cmdClearPart.Position(167,279)
+Gui.F_Param.cmdClearPart.Caption("Clear")
+Gui.F_Param.cmdClearPart.FontName("Tahoma")
+Gui.F_Param.cmdClearPart.FontSize(8.25)
+Gui.F_Param.cmdClearPart.Event(Click,cmdClearPart_Click)
+Gui.F_Param.cmdClearPart.Parent("frame1")
+Gui.F_Param.cmdClearAssembly.Create(Button)
+Gui.F_Param.cmdClearAssembly.Enabled(True)
+Gui.F_Param.cmdClearAssembly.Visible(True)
+Gui.F_Param.cmdClearAssembly.Zorder(0)
+Gui.F_Param.cmdClearAssembly.Size(75,15)
+Gui.F_Param.cmdClearAssembly.Position(167,184)
+Gui.F_Param.cmdClearAssembly.Caption("Clear")
+Gui.F_Param.cmdClearAssembly.FontName("Tahoma")
+Gui.F_Param.cmdClearAssembly.FontSize(8.25)
+Gui.F_Param.cmdClearAssembly.Event(Click,cmdClearAssembly_Click)
+Gui.F_Param.cmdClearAssembly.Parent("frame1")
+Gui.F_Param.cmdClearCust.Create(Button)
+Gui.F_Param.cmdClearCust.Enabled(True)
+Gui.F_Param.cmdClearCust.Visible(True)
+Gui.F_Param.cmdClearCust.Zorder(0)
+Gui.F_Param.cmdClearCust.Size(75,15)
+Gui.F_Param.cmdClearCust.Position(167,93)
+Gui.F_Param.cmdClearCust.Caption("Clear")
+Gui.F_Param.cmdClearCust.FontName("Tahoma")
+Gui.F_Param.cmdClearCust.FontSize(8.25)
+Gui.F_Param.cmdClearCust.Event(Click,cmdClearCust_Click)
+Gui.F_Param.cmdClearCust.Parent("frame1")
+Gui.F_Param.lbl2.Create(Label,"Assembly",True,45,13,0,4,96,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Param.lbl2.BorderStyle(0)
+Gui.F_Param.lbl2.Parent("frame1")
+Gui.F_Param.txtAssembly.Create(TextboxM)
+Gui.F_Param.txtAssembly.Enabled(True)
+Gui.F_Param.txtAssembly.Visible(True)
+Gui.F_Param.txtAssembly.Zorder(0)
+Gui.F_Param.txtAssembly.Size(238,70)
+Gui.F_Param.txtAssembly.Position(4,111)
+Gui.F_Param.txtAssembly.FontName("Tahoma")
+Gui.F_Param.txtAssembly.FontSize(8.25)
+Gui.F_Param.txtAssembly.Parent("frame1")
+Gui.F_Param.lbl3.Create(Label,"Customer",True,46,13,0,4,4,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Param.lbl3.BorderStyle(0)
+Gui.F_Param.lbl3.Parent("frame1")
+Gui.F_Param.txtCustomer.Create(TextboxM)
+Gui.F_Param.txtCustomer.Enabled(True)
+Gui.F_Param.txtCustomer.Visible(True)
+Gui.F_Param.txtCustomer.Zorder(0)
+Gui.F_Param.txtCustomer.Size(238,70)
+Gui.F_Param.txtCustomer.Position(4,20)
+Gui.F_Param.txtCustomer.FontName("Tahoma")
+Gui.F_Param.txtCustomer.FontSize(8.25)
+Gui.F_Param.txtCustomer.Parent("frame1")
+Gui.F_Param.frame2.Create(Frame)
+Gui.F_Param.frame2.Enabled(True)
+Gui.F_Param.frame2.Visible(True)
+Gui.F_Param.frame2.Zorder(0)
+Gui.F_Param.frame2.Size(389,503)
+Gui.F_Param.frame2.Position(271,0)
+Gui.F_Param.frame2.Caption("")
+Gui.F_Param.frame2.FontName("Tahoma")
+Gui.F_Param.frame2.FontSize(8.25)
+Gui.F_Param.frame2.Anchor(15)
+Gui.F_Param.cmdExport.Create(Button)
+Gui.F_Param.cmdExport.Enabled(True)
+Gui.F_Param.cmdExport.Visible(True)
+Gui.F_Param.cmdExport.Zorder(0)
+Gui.F_Param.cmdExport.Size(75,23)
+Gui.F_Param.cmdExport.Position(309,7)
+Gui.F_Param.cmdExport.Caption("Export")
+Gui.F_Param.cmdExport.FontName("Tahoma")
+Gui.F_Param.cmdExport.FontSize(8.25)
+Gui.F_Param.cmdExport.Event(Click,GetReportData)
+Gui.F_Param.cmdExport.Anchor(9)
+Gui.F_Param.cmdExport.Parent("frame2")
+Gui.F_Param.ddlPartSource.Create(DropDownList)
+Gui.F_Param.ddlPartSource.Enabled(True)
+Gui.F_Param.ddlPartSource.Visible(False)
+Gui.F_Param.ddlPartSource.Zorder(0)
+Gui.F_Param.ddlPartSource.Size(139,20)
+Gui.F_Param.ddlPartSource.Position(116,20)
+Gui.F_Param.ddlPartSource.FontName("Tahoma")
+Gui.F_Param.ddlPartSource.FontSize(8.25)
+Gui.F_Param.ddlPartSource.Parent("frame2")
+Gui.F_Param.lblPartSource.Create(Label,"Part Source",False,56,13,0,117,5,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Param.lblPartSource.BorderStyle(0)
+Gui.F_Param.lblPartSource.Parent("frame2")
+Gui.F_Param.ddlSelection.Create(DropDownList)
+Gui.F_Param.ddlSelection.Enabled(True)
+Gui.F_Param.ddlSelection.Visible(True)
+Gui.F_Param.ddlSelection.Zorder(0)
+Gui.F_Param.ddlSelection.Size(100,20)
+Gui.F_Param.ddlSelection.Position(4,20)
+Gui.F_Param.ddlSelection.FontName("Tahoma")
+Gui.F_Param.ddlSelection.FontSize(8.25)
+Gui.F_Param.ddlSelection.Parent("frame2")
+Gui.F_Param.ddlSelection.Event(Change,ddlSelection_Change)
+Gui.F_Param.GsGcSelect.Create(GsGridControl)
+Gui.F_Param.GsGcSelect.Enabled(True)
+Gui.F_Param.GsGcSelect.Visible(True)
+Gui.F_Param.GsGcSelect.Zorder(0)
+Gui.F_Param.GsGcSelect.Size(389,439)
+Gui.F_Param.GsGcSelect.Position(0,64)
+Gui.F_Param.GsGcSelect.Parent("frame2")
+Gui.F_Param.GsGcSelect.Anchor(15)
+Gui.F_Param.GsGcSelect.Event(CellValueChanged,GsGcSelect_CellValueChanged)
+Gui.F_Param.GsGcSelect.Dock(2)
+Gui.F_Param.cmdSelect2.Create(Button)
+Gui.F_Param.cmdSelect2.Enabled(True)
+Gui.F_Param.cmdSelect2.Visible(True)
+Gui.F_Param.cmdSelect2.Zorder(0)
+Gui.F_Param.cmdSelect2.Size(75,23)
+Gui.F_Param.cmdSelect2.Position(309,34)
+Gui.F_Param.cmdSelect2.Caption("Select All")
+Gui.F_Param.cmdSelect2.FontName("Tahoma")
+Gui.F_Param.cmdSelect2.FontSize(8.25)
+Gui.F_Param.cmdSelect2.Parent("frame2")
+Gui.F_Param.cmdSelect2.Event(Click,cmdSelect2_Click)
+Gui.F_Param.cmdSelect2.Anchor(9)
+Gui.F_Param.GsGcExport.Create(GsGridControl)
+Gui.F_Param.GsGcExport.Enabled(True)
+Gui.F_Param.GsGcExport.Visible(False)
+Gui.F_Param.GsGcExport.Zorder(0)
+Gui.F_Param.GsGcExport.Size(153,81)
+Gui.F_Param.GsGcExport.Position(39,387)
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("Form")
+Gui.Form..Size(1024,720)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(True)
+Gui.Form..MinButton(True)
+Gui.Form..MousePointer(0)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sFilter.Declare
+Program.Sub.Preflight.End
+
+#Region "FinishedCode"
+
+Program.Sub.Main.Start
+'Author: Daniel Duncan
+'4/2/2021
+'Programmed for Arc-tronics
+'Purpose: Report for showing excess inventory levels both inside and outside of a 90 day window.  This gives purchasing agents the ability to analyze on hand and on order inventory levels in relation to established thresholds and move or cancel PO's to support keeping inventory levels within acceptable balances.
+
+f.Intrinsic.Control.Try
+	Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+	'Open connection
+	f.ODBC.Connection!con.OpenCompanyConnection
+	'Load options into the dropdownlists
+	f.Intrinsic.Control.CallSub("LoadSelections")
+	'Show the parameter selection screen
+	gui.F_Param..Show
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.ErrorMsg.Start
+v.Local.sError.Declare
+
+'Generic Error message.
+f.Intrinsic.String.Build("Project ProjectName.g2u {0}{0}Subroutine: {1}{0}Error: {2} with Description: {3}", v.Ambient.NewLine, v.Args.CurrentSub, v.Ambient.ErrorNumber, v.Ambient.ErrorDescription, v.Local.sError)
+f.Intrinsic.UI.Msgbox(v.Local.sError)
+Program.Sub.ErrorMsg.End
+
+Program.Sub.cmdSelect_Click.Start
+v.Local.sSelection.Declare
+v.Local.sText.Declare
+
+f.Intrinsic.Control.Try
+	'Get Selection criteria from DDL
+	v.Local.sSelection.Set(v.Screen.F_Param!ddlSelection.Text)
+	'Depending on the selection, change the main view.
+	f.Intrinsic.Control.SelectCase(v.Local.sSelection.Trim)
+		f.Intrinsic.Control.Case("Component")
+			'Check if Selection DV exists.
+			f.Intrinsic.Control.If(v.DataView.componentDT!componenSelectDV.Exists)
+				f.Data.DataView.Close("componentDT", "componenSelectDV")
+			f.Intrinsic.Control.EndIf
+			'Accept Changes to Table and Create DV.
+			f.Data.Datatable.AcceptChanges("componentDT")
+			f.Data.DataView.Create("componentDT", "componenSelectDV", 22, "Select = True", "")
+			'Get String Parameter from DV
+			f.Data.DataView.ToString("componentDT", "componenSelectDV", "Part", ",", "*!*",v.Local.sText)
+			gui.F_Param.txtComponent.Text(v.Local.sText)
+			gui.F_Param.txtCustomer.Text("")
+			gui.F_Param.txtAssembly.Text("")
+			'Close Selection
+			f.Data.DataView.Close("componentDT", "componenSelectDV")
+			
+		f.Intrinsic.Control.Case("Assembly")
+			'Check if Selection DV exists.
+			f.Intrinsic.Control.If(v.DataView.assemblyDT!assemblySelectDV.Exists)
+				f.Data.DataView.Close("assemblyDT", "assemblySelectDV")
+			f.Intrinsic.Control.EndIf
+			'Accept Changes to Table and Create DV.
+			f.Data.Datatable.AcceptChanges("assemblyDT")
+			f.Data.DataView.Create("assemblyDT", "assemblySelectDV", 22, "Select = True", "")
+			'Get String Parameter from DV
+			f.Data.DataView.ToString("assemblyDT", "assemblySelectDV", "Parent", ",", "*!*",v.Local.sText)
+			gui.F_Param.txtAssembly.Text(v.Local.sText)
+			gui.F_Param.txtCustomer.Text("")
+			gui.F_Param.txtComponent.Text("")
+			'Close Selection
+			f.Data.DataView.Close("assemblyDT", "assemblySelectDV")
+			
+		f.Intrinsic.Control.Case("Customer")
+			'Check if Selection DV exists.
+			f.Intrinsic.Control.If(v.DataView.customerDT!customerSelectDV.Exists)
+				f.Data.DataView.Close("customerDT", "customerSelectDV")
+			f.Intrinsic.Control.EndIf
+			'Accept Changes to Table and Create DV.
+			f.Data.Datatable.AcceptChanges("customerDT")
+			f.Data.DataView.Create("customerDT", "customerSelectDV", 22, "Select = True", "")
+			'Get String Parameter from DV
+			f.Data.DataView.ToString("customerDT", "customerSelectDV", "Customer", ",", "*!*",v.Local.sText)
+			gui.F_Param.txtCustomer.Text(v.Local.sText)
+			gui.F_Param.txtAssembly.Text("")
+			gui.F_Param.txtComponent.Text("")
+			'Close Selection
+			f.Data.DataView.Close("customerDT", "customerSelectDV")
+			
+	f.Intrinsic.Control.EndSelect
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSelect_Click.End
+
+Program.Sub.ddlSelection_Change.Start
+v.Local.sSelection.Declare
+f.Intrinsic.Control.Try
+	'Get Selection criteria from DDL
+	v.Local.sSelection.Set(v.Screen.F_Param!ddlSelection.Text)
+	'Depending on the selection, change the main view.
+	f.Intrinsic.Control.SelectCase(v.Local.sSelection.Trim)
+		f.Intrinsic.Control.Case("Component")
+			'If the component DT already exists, switch to that GV.  Else, load the DT, create the GV.
+			f.Intrinsic.Control.If(v.DataTable.componentDT.Exists,=,False)
+				f.Intrinsic.Control.CallSub(LoadParts)
+			f.Intrinsic.Control.EndIf
+			gui.F_Param.GsGcSelect.MainView("componentGV")
+			gui.F_Param.lblPartSource.Visible(False)
+			gui.F_Param.ddlPartSource.Visible(False)
+		f.Intrinsic.Control.Case("Assembly")
+			'If the assembly (BOM) DT already exists, switch to that GV.  Else, load the DT, create the GV.
+			f.Intrinsic.Control.If(v.DataTable.assemblyDT.Exists,=,False)
+				f.Intrinsic.Control.CallSub(LoadBOMs)
+			f.Intrinsic.Control.EndIf
+			gui.F_Param.GsGcSelect.MainView("assemblyGV")
+			gui.F_Param.lblPartSource.Visible(False)
+			gui.F_Param.ddlPartSource.Visible(False)
+		f.Intrinsic.Control.Case("Customer")
+			'If the customer DT already exists, switch to that GV.  Else, load the DT, create the GV.
+			f.Intrinsic.Control.If(v.DataTable.customerDT.Exists,=,False)
+				f.Intrinsic.Control.CallSub(LoadCustomers)
+			f.Intrinsic.Control.EndIf
+			gui.F_Param.GsGcSelect.MainView("customerGV")
+			gui.F_Param.lblPartSource.Visible(True)
+			gui.F_Param.ddlPartSource.Visible(True)
+	f.Intrinsic.Control.EndSelect
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.ddlSelection_Change.End
+
+Program.Sub.cmdSelect2_Click.Start
+v.Local.sSelection.Declare
+v.Local.bSelect.Declare
+f.Intrinsic.Control.Try
+	'Get Selection criteria from DDL
+	v.Local.sSelection.Set(v.Screen.F_Param!ddlSelection.Text)
+	f.Intrinsic.Control.If(v.Screen.F_Param!cmdSelect2.Caption, =, "Select All")
+		v.Local.bSelect.Set(True)
+		gui.F_Param.cmdSelect2.Caption("Unselect All")
+	f.Intrinsic.Control.Else
+		v.Local.bSelect.Set(False)
+		gui.F_Param.cmdSelect2.Caption("Select All")
+	f.Intrinsic.Control.EndIf
+	
+	'Depending on the selection, change the main view.
+	f.Intrinsic.Control.SelectCase(v.Local.sSelection.Trim)
+		f.Intrinsic.Control.Case("Component")
+			'gui.F_Param.GsGcSelect.SetCellValueByColumnName("componentGV", "Select", -1, v.Local.bSelect)
+			f.Data.Datatable.SetValue("componentDT", -1, "Select", v.Local.bSelect)
+		f.Intrinsic.Control.Case("Assembly")
+			'gui.F_Param.GsGcSelect.SetCellValueByColumnName("assemblyGV", "Select", -1, v.Local.bSelect)
+			f.Data.Datatable.SetValue("assemblyDT", -1, "Select", v.Local.bSelect)
+		f.Intrinsic.Control.Case("Customer")
+			'gui.F_Param.GsGcSelect.SetCellValueByColumnName("customerGV", "Select", -1, v.Local.bSelect)
+			f.Data.Datatable.SetValue("customerDT", -1, "Select", v.Local.bSelect)
+	f.Intrinsic.Control.EndSelect
+	
+	f.Intrinsic.Control.CallSub(cmdSelect_Click)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+
+
+Program.Sub.cmdSelect2_Click.End
+
+Program.Sub.LoadCustomers.Start
+	v.Local.iCnt.Declare
+	v.Local.sFields.Declare
+	v.Local.iVisibleIndex.Declare
+	f.Intrinsic.Control.Try
+		'Create Tables for Selection
+		f.Data.Datatable.CreateFromSQL("customerDT", "con", "Select Customer, Name_Customer from V_Customer_master", True)
+		f.Data.Datatable.AddColumn("customerDT", "Select", "Boolean", False)
+		f.Data.DataView.Create("customerDT", "customerDV", 22)
+		gui.F_Param.GsGcSelect.AddGridviewFromDataview("customerGV", "customerDT", "customerDV")
+		
+		v.Local.iCnt.Set(0)
+		v.Local.iVisibleIndex.Set(0)
+		v.Local.sFields.Redim(0,0)
+		v.Local.sFields.Set("")
+		
+		f.Intrinsic.String.Split(v.DataTable.customerDT.FieldNames, "*!*", v.Local.sFields)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+			gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		
+		'GridView Properties
+		gui.F_Param.GsGcSelect.BestFitColumns("customerGV")
+		gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "OptionsViewColumnAutoWidth", False)
+		'gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "OptionsViewShowAutoFilterRow", True)
+		'gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "OptionsFindAlwaysVisible", True)
+		'gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "Showgrouppanel", True)
+		
+		'Possible Column Properties 
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "ReadOnly", False)
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "AllowEdit", True)
+		
+		'VisibleIndex
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "VisibleIndex", v.Local.iVisibleIndex)
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Customer", "VisibleIndex", v.Local.iVisibleIndex.++)
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Name_Customer", "VisibleIndex", v.Local.iVisibleIndex.++)
+		
+		'Caption
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "Caption", " ")
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Customer", "Caption", "Customer")
+		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Name_Customer", "Caption", "Customer Name")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadCustomers.End
+
+Program.Sub.LoadParts.Start
+	v.Local.iCnt.Declare
+	v.Local.sFields.Declare
+	v.Local.iVisibleIndex.Declare
+	f.Intrinsic.Control.Try
+		
+			'Create Tables for Selection
+			f.Data.Datatable.CreateFromSQL("componentDT", "con", "Select part, location, Product_line, description, um_inventory, code_sort from Inventory_Mstr;", True)
+			f.Data.Datatable.AddColumn("componentDT", "Select", "Boolean", False)
+			f.Data.DataView.Create("componentDT", "componentDV", 22)
+			gui.F_Param.GsGcSelect.AddGridviewFromDataview("componentGV", "componentDT", "componentDV")
+			
+			f.Intrinsic.String.Split(v.DataTable.componentDT.FieldNames, "*!*", v.Local.sFields)
+			f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+				gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+			f.Intrinsic.Control.Next(v.Local.iCnt)
+			
+			'GridView Properties
+			gui.F_Param.GsGcSelect.BestFitColumns("componentGV")
+			gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "OptionsViewColumnAutoWidth", False)
+			'gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "OptionsViewShowAutoFilterRow", True)
+			'gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "OptionsFindAlwaysVisible", True)
+			'gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "Showgrouppanel", True)
+			
+			'Possible Column Properties 
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "ReadOnly", False)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "AllowEdit", True)
+			
+			'VisibleIndex
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "VisibleIndex", v.Local.iVisibleIndex)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Part", "VisibleIndex", v.Local.iVisibleIndex.++)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Location", "VisibleIndex", v.Local.iVisibleIndex.++)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Product_line", "VisibleIndex", v.Local.iVisibleIndex.++)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Description", "VisibleIndex", v.Local.iVisibleIndex.++)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Um_inventory", "VisibleIndex", v.Local.iVisibleIndex.++)
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Code_sort", "VisibleIndex", v.Local.iVisibleIndex.++)
+			
+			'Caption
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "Caption", " ")
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Part", "Caption", "Part")
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Location", "Caption", "Loc")
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Product_line", "Caption", "PL")
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Description", "Caption", "Description")
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Um_inventory", "Caption", "UM")
+			gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Code_sort", "Caption", "Buyer")
+		'f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadParts.End
+
+Program.Sub.LoadBOMs.Start
+	v.Local.iCnt.Declare
+	v.Local.sFields.Declare
+	v.Local.iVisibleIndex.Declare
+	f.Intrinsic.Control.Try
+		'Create Tables for Selection
+		f.Data.Datatable.CreateFromSQL("assemblyDT", "con", "Select Distinct A.Parent, B.Location, B.Product_Line, B.Description, B.Um_inventory, B.Code_sort from BOM_Mstr A Left outer join Inventory_Mstr B on A.Parent = B.Part;", True)
+		f.Data.Datatable.AddColumn("assemblyDT", "Select", "Boolean", False)
+		f.Data.DataView.Create("assemblyDT", "assemblyDV", 22)
+		gui.F_Param.GsGcSelect.AddGridviewFromDataview("assemblyGV", "assemblyDT", "assemblyDV")
+		
+		f.Intrinsic.String.Split(v.DataTable.assemblyDT.FieldNames, "*!*", v.Local.sFields)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+			gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		
+		'GridView Properties
+		gui.F_Param.GsGcSelect.BestFitColumns("assemblyGV")
+		gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "OptionsViewColumnAutoWidth", False)
+		'gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "OptionsViewShowAutoFilterRow", True)
+		'gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "OptionsFindAlwaysVisible", True)
+		'gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "Showgrouppanel", True)
+		
+		'Possible Column Properties 
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "ReadOnly", False)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "AllowEdit", True)
+		'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "HeaderHAlignment", "Center")
+		'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "CellHAlignment", "Center")
+		'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "Caption", "Default")
+		'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "Visible", False)
+		'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "DisplayCustomDatetime", "d")
+		
+		'Caption
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "Caption", " ")
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Parent", "Caption", "Assembly")
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Location", "Caption", "Loc")
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Product_Line", "Caption", "PL")
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Description", "Caption", "Description")
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Um_inventory", "Caption", "UM")
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Code_sort", "Caption", "Buyer")
+		
+		'VisibleIndex
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "VisibleIndex", v.Local.iVisibleIndex)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Parent", "VisibleIndex", v.Local.iVisibleIndex.++)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Location", "VisibleIndex", v.Local.iVisibleIndex.++)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Product_Line", "VisibleIndex", v.Local.iVisibleIndex.++)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Description", "VisibleIndex", v.Local.iVisibleIndex.++)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Um_inventory", "VisibleIndex", v.Local.iVisibleIndex.++)
+		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Code_sort", "VisibleIndex", v.Local.iVisibleIndex.++)
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.LoadBOMs.End
+
+Program.Sub.F_Param_UnLoad.Start
+	'Closes ODBC connection, default to connection : "con"
+	f.Intrinsic.Control.If(v.ODBC!con.State, =, 1)
+		'f.ODBC.Connection!con.Close
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.End
+Program.Sub.F_Param_UnLoad.End
+
+Program.Sub.cmdClearPart_Click.Start
+	gui.F_Param.txtComponent.Text("")
+Program.Sub.cmdClearPart_Click.End
+
+Program.Sub.cmdClearAssembly_Click.Start
+	gui.F_Param.txtAssembly.Text("")
+Program.Sub.cmdClearAssembly_Click.End
+
+Program.Sub.cmdClearCust_Click.Start
+	gui.F_Param.txtCustomer.Text("")
+Program.Sub.cmdClearCust_Click.End
+
+Program.Sub.GsGcSelect_CellValueChanged.Start
+	'This fires BEFORE the cell value change is registered, so flip the value before creating the dv
+	v.Local.sSelection.Declare
+	v.Local.sText.Declare
+	v.Local.bSelect.Declare
+	
+	f.Intrinsic.Control.Try
+		'Get Selection criteria from DDL
+		v.Local.sSelection.Set(v.Screen.F_Param!ddlSelection.Text)
+		'Depending on the selection, change the main view.
+		f.Intrinsic.Control.SelectCase(v.Local.sSelection.Trim)
+			f.Intrinsic.Control.Case("Component")
+				'Check if Selection DV exists.
+				f.Intrinsic.Control.If(v.DataView.componentDT!componenSelectDV.Exists)
+					f.Data.DataView.Close("componentDT", "componenSelectDV")
+				f.Intrinsic.Control.EndIf
+				'Flip the value to what it actually will be after this event fires.
+				v.Local.bSelect.Set(v.DataTable.componentDT(v.Args.rowindex).Select!FieldValFloat)
+				f.Intrinsic.Control.If(v.Local.bSelect)
+					f.data.DataTable.SetValue("componentDT",v.Args.rowindex,"Select",False)
+					gui.F_Param.GsGcSelect.SetCellValue("componentGV",6,v.Args.rowindex,True)
+				f.Intrinsic.Control.else
+					f.data.DataTable.SetValue("componentDT",v.Args.rowindex,"Select",True)
+					'End cell edit???
+					gui.F_Param.GsGcSelect.SetCellValue("componentGV",6,v.Args.rowindex,True)
+				f.Intrinsic.Control.EndIf
+				
+				'Accept Changes to Table and Create DV.
+				f.Data.Datatable.AcceptChanges("componentDT")
+				f.Data.DataView.Create("componentDT", "componenSelectDV", 22, "Select = True", "")
+				'Get String Parameter from DV
+				f.Data.DataView.ToString("componentDT", "componenSelectDV", "Part", ",", "*!*",v.Local.sText)
+				gui.F_Param.txtComponent.Text(v.Local.sText)
+				gui.F_Param.txtCustomer.Text("")
+				gui.F_Param.txtAssembly.Text("")
+				'Close Selection
+				f.Data.DataView.Close("componentDT", "componenSelectDV")
+				
+			f.Intrinsic.Control.Case("Assembly")
+				'Check if Selection DV exists.
+				f.Intrinsic.Control.If(v.DataView.assemblyDT!assemblySelectDV.Exists)
+					f.Data.DataView.Close("assemblyDT", "assemblySelectDV")
+				f.Intrinsic.Control.EndIf
+				'Flip the value to what it actually will be after this event fires.
+				v.Local.bSelect.Set(v.DataTable.assemblyDT(v.Args.rowindex).Select!FieldValFloat)
+				f.Intrinsic.Control.If(v.Local.bSelect)
+					f.data.DataTable.SetValue("assemblyDT",v.Args.rowindex,"Select",False)
+				f.Intrinsic.Control.else
+					f.data.DataTable.SetValue("assemblyDT",v.Args.rowindex,"Select",True)
+				f.Intrinsic.Control.EndIf
+				'Accept Changes to Table and Create DV.
+				f.Data.Datatable.AcceptChanges("assemblyDT")
+				f.Data.DataView.Create("assemblyDT", "assemblySelectDV", 22, "Select = True", "")
+				'Get String Parameter from DV
+				f.Data.DataView.ToString("assemblyDT", "assemblySelectDV", "Parent", ",", "*!*",v.Local.sText)
+				gui.F_Param.txtAssembly.Text(v.Local.sText)
+				gui.F_Param.txtCustomer.Text("")
+				gui.F_Param.txtComponent.Text("")
+				'Close Selection
+				f.Data.DataView.Close("assemblyDT", "assemblySelectDV")
+				
+			f.Intrinsic.Control.Case("Customer")
+				'Check if Selection DV exists.
+				f.Intrinsic.Control.If(v.DataView.customerDT!customerSelectDV.Exists)
+					f.Data.DataView.Close("customerDT", "customerSelectDV")
+				f.Intrinsic.Control.EndIf
+				'Flip the value to what it actually will be after this event fires.
+				v.Local.bSelect.Set(v.DataTable.customerDT(v.Args.rowindex).Select!FieldValFloat)
+				f.Intrinsic.Control.If(v.Local.bSelect)
+					f.data.DataTable.SetValue("customerDT",v.Args.rowindex,"Select",False)
+				f.Intrinsic.Control.else
+					f.data.DataTable.SetValue("customerDT",v.Args.rowindex,"Select",True)
+				f.Intrinsic.Control.EndIf
+				'Accept Changes to Table and Create DV.
+				f.Data.Datatable.AcceptChanges("customerDT")
+				f.Data.DataView.Create("customerDT", "customerSelectDV", 22, "Select = True", "")
+				'Get String Parameter from DV
+				f.Data.DataView.ToString("customerDT", "customerSelectDV", "Customer", ",", "*!*",v.Local.sText)
+				gui.F_Param.txtCustomer.Text(v.Local.sText)
+				gui.F_Param.txtAssembly.Text("")
+				gui.F_Param.txtComponent.Text("")
+				'Close Selection
+				f.Data.DataView.Close("customerDT", "customerSelectDV")
+				
+		f.Intrinsic.Control.EndSelect
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.EndTry
+Program.Sub.GsGcSelect_CellValueChanged.End
+
+Program.Sub.GetReportData.Start
+	f.Intrinsic.Control.Try
+		v.Local.sSQL.Declare
+		v.Local.sFilter.Declare
+		v.Local.sCriteria.Declare
+		v.Local.iCnt.Declare
+		v.Local.iCnt2.Declare
+		v.Local.sCustSQL.Declare(string,"select part, customer, customer_part from v_inv_cross_ref")
+		v.Local.fRequirements.Declare
+		v.Local.dDate.Declare
+		v.Local.sFilePath.Declare
+		v.Local.sRet.Declare
+		v.Local.iVI.declare(Long,-1)
+		v.Local.sParams.declare
+		v.Local.sFile.Declare
+		V.Local.sFieldNames.Declare
+		V.Local.sTypes.Declare
+		v.Local.sDate.Declare
+		v.Local.sFields.Declare
+		v.Local.sFieldMap.Declare
+		
+		'Show user some feedback on process
+		f.Intrinsic.UI.InvokeWaitDialog("Building data.  Please wait.","Excess Inventory Report")
+		f.Intrinsic.UI.ChangeWaitStatus("Building data.  Please wait.",0,0,100)
+		
+		'Field names and types for creating a temp DT to use with the 410000 callwrapper
+		V.Local.sFieldNames.Set("Line*!*Seq*!*Part*!*Description*!*Cat*!*Source*!*Qty*!*Qty_OnHand*!*Qty_OnOrder*!*Required*!*Net*!*RtrNet*!*Parent*!*LeadDays*!*LdDate*!*filler*!*BuyerType")
+		V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+		
+		'Clear the temp table for inserting parts/BOMs/customers
+		f.Intrinsic.String.Build("delete from gcg_5995_temppart where trmnl='{0}'",v.Caller.Terminal,v.Local.sSQL)
+		f.ODBC.Connection!con.Execute(v.Local.sSQL)
+		
+		'Always pull data from inventory master
+		'If pulling by component, just pull all selected parts
+		'If pulling by assembly, pull all parts inside the selected assemblies
+		'If pulling by customer, pull all parts that have a cust xref for the selected customers
+		f.Intrinsic.Control.If(v.Screen.F_Param!txtComponent.Text,<>,"")
+			f.Intrinsic.String.Build("select '' as Parent, '' as ParentStatus, part, if(flag_inactive='Y','Inactive','Active') as Status, Description, UM_Inventory as UnitOfMeasure, convert(0, sql_float) as Cost, Qty_Order as OrderMult, qty_onhand, code_sort as BuyerType, '' as BuyerName from v_inventory_all where part in (select part from gcg_5995_temppart where trmnl='{0}')",v.Caller.Terminal,v.Local.sSQL)
+			
+			'The query may exceed Pervasive's maximum allowed number of characters.  Thus, we will save parts to temp table.
+			f.Data.DataView.Create("componentDT","DVTemp",22,"Select=True","")
+			f.Data.DataView.ToDataTableDistinct("componentDT","DVTemp","dt5995Temp","Part")
+			
+			'Set field map
+			v.Local.sFieldMap.Set("TRMNL@!@TRMNL*!*PART@!@PART")
+			
+		f.Intrinsic.Control.ElseIf(v.Screen.F_Param!txtAssembly.Text,<>,"")
+			f.Intrinsic.String.Build("select b.parent, '' as ParentStatus, a.Part, if(a.flag_inactive='Y','Inactive','Active') as Status, a.Description, a.UM_Inventory as UnitOfMeasure, convert(0, sql_float) as Cost, a.Qty_Order as OrderMult, a.qty_onhand, a.code_sort as BuyerType, '' as BuyerName from v_inventory_all a inner join v_bom_mstr b on a.part=b.part where b.parent in (select part from gcg_5995_temppart where trmnl='{0}')",v.Caller.Terminal,v.Local.sSQL)
+			
+			'The query may exceed Pervasive's maximum allowed number of characters.  Thus, we will save parts to temp table.
+			f.Data.DataView.Create("assemblyDT","DVTemp",22,"Select=True","")
+			f.Data.DataView.ToDataTableDistinct("assemblyDT","DVTemp","dt5995Temp","Parent")
+			
+			'Set field map
+			v.Local.sFieldMap.Set("TRMNL@!@TRMNL*!*PARENT@!@PART")
+		f.Intrinsic.Control.ElseIf(v.Screen.F_Param!txtCustomer.Text,<>,"")
+			f.Intrinsic.String.Build("select '' as Parent, '' as ParentStatus, a.Part, if(a.flag_inactive='Y','Inactive','Active') as Status, Description, UM_Inventory as UnitOfMeasure, convert(0, sql_float) as Cost, Qty_Order as OrderMult, qty_onhand, code_sort as BuyerType, '' as BuyerName from v_inventory_all a where customer in (select part from gcg_5995_temppart where trmnl='{0}')",v.Caller.Terminal,v.Local.sSQL)
+			
+			'The query may exceed Pervasive's maximum allowed number of characters.  Thus, we will save parts to temp table.
+			f.Data.DataView.Create("customerDT","DVTemp",22,"Select=True","")
+			f.Data.DataView.ToDataTableDistinct("customerDT","DVTemp","dt5995Temp","Customer")
+			
+			'Set field map
+			v.Local.sFieldMap.Set("TRMNL@!@TRMNL*!*CUSTOMER@!@PART")
+			
+			'Decide filtering based on part source only when customer is selected
+			f.Intrinsic.Control.SelectCase(v.Screen.F_Param!ddlPartSource.Text)
+				f.Intrinsic.Control.Case("Make")
+					f.Intrinsic.String.Build("{0} and code_source in ('M','F')",v.Local.sSQL,v.Local.sSQL)
+				f.Intrinsic.Control.Case("Buy")
+					f.Intrinsic.String.Build("{0} and code_source in ('P','J')",v.Local.sSQL,v.Local.sSQL)
+			f.Intrinsic.Control.EndSelect
+			
+			'Change the customer part DT to include a filter for customers
+			f.Intrinsic.String.Build("select part, customer, customer_part from v_inv_cross_ref where customer in ('{0}')",v.Screen.F_Param!txtCustomer.Text,v.Local.sCustSQL)
+		f.Intrinsic.Control.EndIf
+		
+		'Set stuff for temp table
+		f.Data.DataTable.AddColumn("dt5995Temp","TRMNL","string",V.Caller.Terminal)
+		F.Data.DataTable.SaveToDB("dt5995Temp","con","GCG_5995_TempPart","TRMNL*!*PART",128,V.Local.sFieldMap)
+		
+		'Replace the delimiter
+		f.Intrinsic.String.Replace(v.Local.sSQL,"*!*","','",v.Local.sSQL)
+		f.Intrinsic.String.Replace(v.Local.sCustSQL,"*!*","','",v.Local.sCustSQL)
+		
+		'Create the report datatable		
+		f.Data.DataTable.CreateFromSQL("dtReport","con",v.Local.sSQL)
+		
+		'Update status
+		f.Intrinsic.UI.ChangeWaitStatus("Building data.  Please wait.",20,0,100)
+		
+		'If running for a BOM, users need to see the full exploded BOM
+		f.Intrinsic.Control.If(v.Screen.F_Param!txtAssembly.Text,<>,"")
+			'Make a blank copy of the datatable above
+			f.Intrinsic.String.Build("{0} and 1=0",v.Local.sSQL,v.Local.sSQL)
+			f.Data.DataTable.CreateFromSQL("dtReportTemp","con",v.Local.sSQL)
+			f.Intrinsic.String.Split(v.Screen.F_Param!txtAssembly.Text,"*!*",v.Local.sCriteria)
+			f.Intrinsic.Control.For(v.Local.iCnt,0,v.Local.sCriteria.UBound,1)
+				F.Intrinsic.String.Build("{0}\BOM{1}", V.System.Temp, V.Caller.Terminal, V.Local.sFilePath)
+				F.Intrinsic.String.Build("0{0}{1}{0}{2}",V.Ambient.Tab, v.Local.sCriteria(v.Local.iCnt), v.Local.sFilePath, V.Local.sParams)
+				F.Intrinsic.File.String2File(V.Local.sFilePath, V.Local.sParams)
+				F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+				
+				F.Intrinsic.File.FiletoStringArray(V.Local.sFilePath,V.Ambient.Tab,V.Local.sRet)
+				V.Local.sRet.RedimPreserve(0,3)
+				F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet(3),V.Local.sFile.Trim)
+				F.Intrinsic.String.Split(V.Local.sFile," ",V.Local.sFile)
+				F.Intrinsic.String.Build("{0}\{1}",V.System.Temp,V.Local.sFile(0).Trim,V.Local.sFilePath)
+				
+				F.Intrinsic.File.File2String(V.Local.sFilePath,V.Local.sFilePath)
+				
+				F.Data.DataTable.CreateFromString("DTTemp",V.Local.sFilePath,V.Local.sFieldNames,V.Local.sTypes,"|~|",v.ambient.newline,True)
+				'Remove unneeded rows, including the parent and the very last row, which is blank
+				f.Intrinsic.Control.For(v.Local.iCnt2,1,8,1)
+					f.Data.DataTable.DeleteRow("DTTemp",0)
+					f.Data.DataTable.acceptchanges("DTTemp")
+				f.Intrinsic.Control.Next(v.Local.iCnt2)
+				f.Data.DataTable.DeleteRow("DTTemp",v.DataTable.DTTemp.RowCount--)
+				
+				'Extract only the needed columns, join with inv mstr data needed, then merge with dtReport
+				f.Data.DataView.Create("DTTemp","DVTemp",22)
+				f.Data.DataView.ToDataTableDistinct("DTTemp","DVTemp","dtTempTemp","Parent*!*Part*!*Description*!*Qty_OnHand*!*BuyerType")
+				
+				f.Data.DataTable.Merge("dtTempTemp","dtReportTemp",True,2)
+				f.Data.DataView.Close("DTTemp","DVTemp")
+				f.Data.DataTable.Close("DTTemp")
+				f.Data.DataTable.Close("DTTempTemp")
+			f.Intrinsic.Control.Next(v.Local.iCnt)
+		
+			f.Data.DataTable.AddExpressionColumn("dtReportTemp","Part_Formatted","string","trim(Part)")
+			
+			'Get the missing inventory attributes and join with dtReportTemp
+			f.Data.DataTable.CreateFromSQL("dtInv","con","select rtrim(part) as Part, if(flag_inactive='Y','Inactive','Active') as Status, UM_Inventory as UnitOfMeasure, Qty_Order as OrderMult, 0 as Cost from v_inventory_all")
+			f.Data.Linq.Join(v.Enum.LinqJoinType!InnerJoin,v.Enum.LinqSourceType!DataTable,"dtReportTemp*!*RT",v.Enum.LinqSourceType!DataTable,"dtInv*!*Inv","RT.Part_Formatted=Inv.Part","RT.Parent*!*Inv.Part*!*RT.Description*!*RT.Qty_OnHand*!*RT.BuyerType*!*Inv.Status*!*Inv.UnitOfMeasure*!*Inv.OrderMult*!*Inv.Cost","","","","dtReportTempTemp",true)
+			
+			f.Data.DataTable.Merge("dtReportTempTemp","dtReport",True,2)
+			
+			'Close some data structures
+			f.Data.DataTable.Close("dtReportTempTemp")
+			f.Data.DataTable.Close("dtReportTemp")
+			f.Data.DataTable.Close("dtInv")
+		f.Intrinsic.Control.EndIf
+		
+		'Update status
+		f.Intrinsic.UI.ChangeWaitStatus("Building data.  Please wait.",40,0,100)
+		
+		'Get all customer part numbers
+		f.Data.DataTable.CreateFromSQL("dtCustPart","con",v.Local.sCustSQL)
+		
+		'Get date last received
+		f.Data.DataTable.CreateFromSQL("dtLastRecvd","con","select replace(part,'*','') as Part, max(date_history) as DateLastReceived from v_inventory_hist where part<>'' and code_transaction in ('P10','R10') group by part")
+		
+		'Get date last issued
+		f.Data.DataTable.CreateFromSQL("dtLastIssued","con","select replace(part,'*','') as Part, max(date_history) as DateLastIssued from v_inventory_hist where part<>'' and code_transaction = 'J55' group by part")
+		
+		'Get date last shipped, along with qty
+		f.Data.DataTable.CreateFromSQL("dtLastShipped","con","select ohl.part, ohl.qty_shipped, ohl.date_shipped from v_order_hist_line ohl where date_shipped = (select max(date_shipped) from v_order_hist_line where part=ohl.part)")
+		
+		'Get data from bom edit custom table
+		f.Data.DataTable.CreateFromSQL("dtBOMEdit","con","select distinct part, rev, part_class, part_type, ncnr from gcg_5786_bom_edit")
+		
+		'Get VMI qtys
+		f.Data.DataTable.CreateFromSQL("dtVMI","con","select distinct part, sum(quantity) as Qty_VMI, user_field_1 as VMI_Vendor from v_item_master where user_field_3='VMI' and bin='VMI' group by part, user_field_1")
+		
+		'Get Arc-tronics in-store qtys
+		f.Data.DataTable.CreateFromSQL("dtARCIS","con","select distinct part, sum(quantity) as Qty_ARCIS from v_item_master where user_field_4='' and bin<>'VMI' group by part")
+		
+		'Get customer in-store qtys
+		f.Data.DataTable.CreateFromSQL("dtCustIS","con","select distinct part, sum(quantity) as Qty_CustIS, user_field_4 as InStore_Customer from v_item_master where user_field_4<>'' and bin<>'VMI' group by part, user_field_4")
+		
+		'Get customer names
+		f.Data.DataTable.CreateFromSQL("dtCustomers","con","select customer, name_customer from v_customer_master")
+		
+		'Get part cost via dict
+		f.Data.Dictionary.Createfromsql("dictCost","con","select part, cost from v_inventory_cost")
+		f.Data.Dictionary.SetDefaultReturn("dictCost",0)
+		f.Data.DataTable.FillFromDictionary("dtReport","dictCost","Part","Cost")
+		f.Data.Dictionary.Close("dictCost")
+		
+		'Get sort code descriptions via dict
+		f.Data.Dictionary.Createfromsql("dictSortCode","con","select sort_code, descr from v_inv_sort")
+		f.Data.Dictionary.SetDefaultReturn("dictSortCode","")
+		f.Data.DataTable.FillFromDictionary("dtReport","dictSortCode","BuyerType","BuyerName")
+		f.Data.Dictionary.Close("dictSortCode")
+		
+		'Get BOM parent status if needed
+		f.Intrinsic.Control.If(v.Screen.F_Param!txtAssembly.Text,<>,"")
+			f.Data.dictionary.CreateFromSQL("dictBOM","con","select part, if(flag_inactive='Y','Inactive','Active') AS ParentStatus from v_inventory_all")
+			f.Data.Dictionary.SetDefaultReturn("dictbom","Inactive")
+			f.Data.DataTable.FillFromDictionary("dtreport","dictbom","Parent","ParentStatus")
+			f.Data.Dictionary.Close("dictbom")
+		f.Intrinsic.Control.EndIf
+		
+		'Add expression columns for initial report DT
+		'	Part_17 and Rev: Used to join in GCG_5786_BOM_EDIT
+		f.Data.DataTable.AddExpressionColumn("dtReport","Part_17","string","Substring(part,1,17)")
+		f.Data.DataTable.AddExpressionColumn("dtReport","Rev","string","Substring(part,18,3)")
+		
+		'Determine date 90 days out
+		f.Intrinsic.Date.DateAdd("D",90,v.Ambient.Date,v.Local.dDate)
+		
+		'Get MRP demand data and plug that in (boosted this code from project 6075 in case you wanted to know)
+		f.Intrinsic.String.Build("SELECT PART,'Work Order' AS SOURCE,sum(isnull(QTY_COMMITTED,0)-isnull(QTY_ISSUED,0)) AS QUANTITY FROM V_JOB_COMMITMENTS where date_due <= '{0}' group by part UNION SELECT PART,'Sales Order' AS SOURCE,sum(QTY_BO) AS QUANTITY FROM V_ORDER_LINES where date_item_prom <= '{0}' group by part",v.Local.dDate.PervasiveDate,v.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtJobs","con",v.Local.sSQL)
+		f.Intrinsic.String.Replace(v.Local.sSQL,"<=",">",v.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtJobs90","con",v.Local.sSQL)
+		
+		'Get purchase data and plug that in
+		f.Intrinsic.String.Build("select Part, sum(isnull(Qty_Order,0)-isnull(Qty_Received,0)) as OnOrderQty from v_po_lines where date_due_line <= '{0}' group by part having sum(Qty_Order-Qty_Received)>0",v.Local.dDate.PervasiveDate,v.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtSupply","con",v.Local.sSQL)
+		f.Intrinsic.String.Replace(v.Local.sSQL,"<=",">",v.Local.sSQL)
+		F.Data.DataTable.CreateFromSQL("dtSupply90","con",v.Local.sSQL)
+		
+		'Update status
+		f.Intrinsic.UI.ChangeWaitStatus("Building data.  Please wait.",60,0,100)
+		
+		'Join all DT's together		
+		f.Data.Linq.Join(v.Enum.LinqJoinType!LeftJoin, v.Enum.LinqSourceType!DataTable, "dtReport*!*R", v.Enum.LinqSourceType!DataTable, "dtCustPart*!*CP", "R.Part=CP.Part", v.Enum.LinqSourceType!DataTable, "dtLastRecvd*!*LR", "R.Part=LR.Part", v.Enum.LinqSourceType!DataTable, "dtLastIssued*!*LI", "R.Part=LI.Part", v.Enum.LinqSourceType!DataTable, "dtLastShipped*!*LS", "R.Part=LS.Part", v.Enum.LinqSourceType!DataTable, "dtBOMEdit*!*BE", "R.Part_17=BE.Part and R.Rev=BE.Rev", v.Enum.LinqSourceType!DataTable, "dtVMI*!*VMI","R.Part=VMI.Part", v.Enum.LinqSourceType!DataTable, "dtARCIS*!*AI", "R.Part=AI.Part", v.Enum.LinqSourceType!DataTable, "dtCustIS*!*CI","R.Part=CI.Part", v.Enum.LinqSourceType!DataTable, "dtJobs*!*JO","R.Part=JO.Part", v.Enum.LinqSourceType!DataTable, "dtJobs90*!*JN","R.Part=JN.Part", v.Enum.LinqSourceType!DataTable, "dtSupply*!*Sup", "R.Part=Sup.Part", v.Enum.LinqSourceType!DataTable, "dtSupply90*!*SupN", "R.Part=SupN.Part", v.Enum.LinqSourceType!DataTable, "dtCustomers*!*Cust", "CP.Customer=Cust.Customer", "R.Parent*!*R.ParentStatus*!*R.Part*!*R.Status*!*BE.Part_Class*!*BE.Part_Type*!*R.Description*!*R.UnitOfMeasure*!*BE.NCNR*!*R.Cost*!*R.OrderMult*!*VMI.Qty_VMI*!*AI.Qty_ARCIS*!*CI.Qty_CustIS*!*CP.Customer*!*CP.Customer_Part*!*R.BuyerType*!*R.BuyerName*!*LR.DateLastReceived*!*LI.DateLastIssued*!*LS.Date_Shipped*!*LS.Qty_Shipped*!*R.Qty_OnHand*!*JO.Quantity as ReqQty*!*JN.Quantity as ReqQty90*!*Sup.OnOrderQty as On_Order*!*SupN.OnOrderQty as On_Order90*!*Cust.Name_Customer","","","","dtreportFinal",True)
+		
+		'If not selecting from a BOM, remove the Parent and ParentStatus columns
+		f.Intrinsic.Control.If(v.Screen.F_Param!txtAssembly.Text,=,"")
+			f.Data.DataTable.RemoveColumn("dtreportFinal","Parent")
+			f.Data.DataTable.RemoveColumn("dtreportFinal","ParentStatus")
+		f.Intrinsic.Control.EndIf
+		
+		'Set all null numerical columns to 0
+		'	VMI
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"Qty_VMI is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"Qty_VMI",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		'	ARCIS
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"Qty_ARCIS is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"Qty_ARCIS",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		
+		'	CustIS
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"Qty_CustIS is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"Qty_CustIS",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		
+		'	ReqQty
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"ReqQty is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"ReqQty",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		
+		'	ReqQty90
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"ReqQty90 is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"ReqQty90",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		
+		'	On_Order
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"On_Order is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"On_Order",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		
+		'	On_Order90
+		f.Data.DataView.Create("dtreportFinal","dvQty",22,"On_Order90 is null","")
+		f.Data.DataView.SetValue("dtreportFinal","dvQty",-1,"On_Order90",0)
+		f.Data.DataView.Close("dtreportFinal","dvQty")
+		
+		'Add expression columns for finished report DT
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","ARCQTY_OH","Float","Qty_OnHand-Qty_VMI-Qty_ARCIS-Qty_CustIS")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","QTY_OH","Float","ARCQTY_OH+Qty_VMI")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OH","Float","iif(ReqQty-QTY_OH<0,0,ReqQty-QTY_OH)")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OHD","Float","XS_OH*Cost")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OO","Float","IIF((On_Order+Qty_OH)-ReqQty<0,0,(On_Order+Qty_OH)-ReqQty)")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OOD","Float","XS_OO*Cost")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","PROJ_XS","Float","XS_OO+XS_OH")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","PROJ_XSD","Float","PROJ_XS*Cost")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","TOT_EXP","Float","(QTY_OH*Cost)+(On_Order*Cost)")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OH90","Float","iif(XS_OH-ReqQty90<0,0,XS_OH-ReqQty90)")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OHD90","Float","XS_OH90*Cost")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OO90","Float","IIF(XS_OO-XS_OH90+ON_ORDER90<0,0,XS_OO-XS_OH90+ON_ORDER90)")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","XS_OOD90","Float","XS_OO90*Cost")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","PROJ_XS90","Float","XS_OO90+XS_OH90")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","PROJ_XSD90","Float","PROJ_XS90*Cost")
+		f.Data.DataTable.AddExpressionColumn("dtreportFinal","TOT_EXP90","Float","XS_OHD90+XS_OOD90")
+		
+		
+		'Throw the DT into a GV, format the GV, then export
+		gui.F_Param.GsGcExport.AddGridviewFromDatatable("gvReportFinal","dtreportFinal")
+		
+		'Update status
+		f.Intrinsic.UI.ChangeWaitStatus("Building data.  Please wait.",80,0,100)
+		
+		'Set formatting for dates
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","DateLastReceived","DisplayCustomDatetime","d")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","DateLastIssued","DisplayCustomDatetime","d")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Date_Shipped","DisplayCustomDatetime","d")
+		
+		'Set formatting for numbers
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_VMI","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_ARCIS","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_CustIS","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_Shipped","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_OnHand","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ReqQty","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ReqQty90","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","On_Order","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","On_Order90","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ARCQTY_OH","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","QTY_OH","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OH","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OO","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XS","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OH90","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OO90","DisplayCustomNumeric","#,###,###,##0")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XS90","DisplayCustomNumeric","#,###,###,##0")
+		
+		'Set formatting for dollars
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Cost","DisplayCustomNumeric","$#,###,###,##0.0000")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OHD","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OOD","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XSD","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","TOT_EXP","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OHD90","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OOD90","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XSD90","DisplayCustomNumeric","$#,###,###,##0.00")
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","TOT_EXP90","DisplayCustomNumeric","$#,###,###,##0.00")
+		
+		'Set visible indices for the gridview
+		f.Intrinsic.Control.If(v.Screen.F_Param!txtAssembly.Text,<>,"")
+			'Parent columns are only included when building from the BOM
+			Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Parent","VisibleIndex",v.Local.iVI.++)
+			Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ParentStatus","VisibleIndex",v.Local.iVI.++)
+		f.Intrinsic.Control.EndIf
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Part","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Status","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Part_Class","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Part_Type","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Description","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","UnitOfMeasure","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","NCNR","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Cost","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","OrderMult","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ARCQTY_OH","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_VMI","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_ARCIS","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_CustIS","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ReqQty","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","QTY_OH","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OH","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OHD","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","On_Order","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OO","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OOD","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XS","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XSD","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","TOT_EXP","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","customer_part","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","ReqQty90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OH90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OHD90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","On_Order90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OO90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","XS_OOD90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XS90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","PROJ_XSD90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","TOT_EXP90","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Name_Customer","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","BuyerType","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","BuyerName","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","DateLastReceived","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","DateLastIssued","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Date_Shipped","VisibleIndex",v.Local.iVI.++)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_Shipped","VisibleIndex",v.Local.iVI.++)
+		
+		'Set column headers to bold
+		f.Intrinsic.String.Split(v.DataTable.dtreportFinal.FieldNames, "*!*", v.Local.sFields)
+		f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+			gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+		f.Intrinsic.Control.Next(v.Local.iCnt)
+		
+		'Set visibility of unneeded columns to False
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Customer","Visible",False)
+		Gui.F_Param.GsGcExport.SetColumnProperty("gvReportFinal","Qty_OnHand","Visible",False)
+		
+		'Format column widths
+		gui.F_Param.GsGcExport.bestfitcolumns("gvReportFinal")
+		
+		'Set mainview
+		gui.F_Param.GsGcExport.MainView("gvReportFinal")
+		
+		'Prompt user for save path
+		f.Intrinsic.String.DateString(v.Ambient.Date,v.Local.sDate)
+		f.Intrinsic.String.Build("ExcessInvExport{0}.xlsx",v.Local.sDate,v.Local.sFilePath)
+		f.Intrinsic.UI.ShowSaveFileDialog(v.Local.sFilePath,"Microsoft Excel Workbook[.xlsx]|*.xlsx",v.Local.sRet)
+		
+		'Update status
+		f.Intrinsic.UI.ChangeWaitStatus("Building data.  Please wait.",100,0,100)
+		
+		f.Intrinsic.Control.If(v.Local.sRet,<>,"***CANCEL***")
+			'Export gv to save path
+			gui.F_Param.GsGcExport.Export(v.Local.sRet,"xlsx")
+			'Open file automatically
+			f.Intrinsic.Task.ShellExec(handle, "open",v.Local.sRet,"","", 0)
+		f.Intrinsic.Control.EndIf
+		
+		'Close report final
+		f.Data.DataTable.Close("dtreportFinal")
+	f.Intrinsic.Control.Catch
+		f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+	f.Intrinsic.Control.Finally
+		f.Intrinsic.UI.CloseWaitDialog
+	f.Intrinsic.Control.EndTry
+Program.Sub.GetReportData.End
+
+Program.Sub.LoadSelections.Start
+f.Intrinsic.Control.Try
+	'Add Paremeters to DropDown
+	gui.F_Param.ddlSelection.AddItem("Customer")
+	gui.F_Param.ddlSelection.AddItem("Assembly")
+	gui.F_Param.ddlSelection.AddItem("Component")	
+	
+	gui.F_Param.ddlPartSource.AddItem("Make")
+	gui.F_Param.ddlPartSource.AddItem("Buy")
+	gui.F_Param.ddlPartSource.AddItem("All")
+	
+'	f.ODBC.Connection!con.OpenCompanyConnection
+'		'Create Tables for Selection
+'		f.Data.Datatable.CreateFromSQL("componentDT", "con", "Select part, location, Product_line, description, um_inventory, code_sort from Inventory_Mstr;", True)
+'		f.Data.Datatable.CreateFromSQL("assemblyDT", "con", "Select Distinct A.Parent, B.Location, B.Product_Line, B.Description, B.Um_inventory, B.Code_sort from BOM_Mstr A Left outer join Inventory_Mstr B on A.Parent = B.Part;", True)
+'		f.Data.Datatable.CreateFromSQL("customerDT", "con", "Select Customer, Name_Customer from V_Customer_master", True)
+'	'f.ODBC.Connection!con.Close
+'	
+'	'Add Select
+'	f.Data.Datatable.AddColumn("componentDT", "Select", "Boolean", False)
+'	f.Data.Datatable.AddColumn("assemblyDT", "Select", "Boolean", False)
+'	f.Data.Datatable.AddColumn("customerDT", "Select", "Boolean", False)
+	
+'	'Create DVs.
+'	f.Data.DataView.Create("componentDT", "componentDV", 22)
+'	f.Data.DataView.Create("assemblyDT", "assemblyDV", 22)
+'	f.Data.DataView.Create("customerDT", "customerDV", 22)
+'	
+'	'Create Grids	
+'	gui.F_Param.GsGcSelect.AddGridviewFromDataview("customerGV", "customerDT", "customerDV")
+'	gui.F_Param.GsGcSelect.AddGridviewFromDataview("assemblyGV", "assemblyDT", "assemblyDV")
+'	gui.F_Param.GsGcSelect.AddGridviewFromDataview("componentGV", "componentDT", "componentDV")
+	
+'	f.Intrinsic.Control.CallSub(loadGridProperties)
+	
+	'Applying a text, triggers the Change Event in the DDL. Put this after GVs are completed.
+	'gui.F_Param.ddlSelection.Text("Customer")
+	gui.F_Param.ddlPartSource.Text("Make")
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.LoadSelections.End
+
+#End Region ' FinishedCode
+
+#Region "ObsoleteCode"
+
+Program.Sub.loadGridProperties.Start
+v.Local.iCnt.Declare
+v.Local.sFields.Declare
+v.Local.iVisibleIndex.Declare
+
+f.Intrinsic.Control.Try
+	f.Intrinsic.String.Split(v.DataTable.componentDT.FieldNames, "*!*", v.Local.sFields)
+	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+		gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	'GridView Properties
+	gui.F_Param.GsGcSelect.BestFitColumns("componentGV")
+	gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "OptionsViewColumnAutoWidth", False)
+	'gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "OptionsViewShowAutoFilterRow", True)
+	'gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "OptionsFindAlwaysVisible", True)
+	'gui.F_Param.GsGcSelect.SetGridviewProperty("componentGV", "Showgrouppanel", True)
+	
+	'Possible Column Properties 
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "ReadOnly", False)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "AllowEdit", True)
+	
+	'VisibleIndex
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "VisibleIndex", v.Local.iVisibleIndex)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Part", "VisibleIndex", v.Local.iVisibleIndex.++)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Location", "VisibleIndex", v.Local.iVisibleIndex.++)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Product_line", "VisibleIndex", v.Local.iVisibleIndex.++)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Description", "VisibleIndex", v.Local.iVisibleIndex.++)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Um_inventory", "VisibleIndex", v.Local.iVisibleIndex.++)
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Code_sort", "VisibleIndex", v.Local.iVisibleIndex.++)
+	
+	'Caption
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Select", "Caption", " ")
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Part", "Caption", "Part")
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Location", "Caption", "Loc")
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Product_line", "Caption", "PL")
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Description", "Caption", "Description")
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Um_inventory", "Caption", "UM")
+	gui.F_Param.GsGcSelect.SetColumnProperty("componentGV", "Code_sort", "Caption", "Buyer")
+	
+	'****ASSEMBLY
+'	v.Local.iCnt.Set(0)
+'	v.Local.iVisibleIndex.Set(0)
+'	v.Local.sFields.Redim(0,0)
+'	v.Local.sFields.Set("")
+'	
+'	f.Intrinsic.String.Split(v.DataTable.assemblyDT.FieldNames, "*!*", v.Local.sFields)
+'	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+'	f.Intrinsic.Control.Next(v.Local.iCnt)
+'	
+'	'GridView Properties
+'	gui.F_Param.GsGcSelect.BestFitColumns("assemblyGV")
+'	gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "OptionsViewColumnAutoWidth", False)
+'	'gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "OptionsViewShowAutoFilterRow", True)
+'	'gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "OptionsFindAlwaysVisible", True)
+'	'gui.F_Param.GsGcSelect.SetGridviewProperty("assemblyGV", "Showgrouppanel", True)
+'	
+'	'Possible Column Properties 
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "ReadOnly", False)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "AllowEdit", True)
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "HeaderHAlignment", "Center")
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "CellHAlignment", "Center")
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "Caption", "Default")
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "Visible", False)
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Default", "DisplayCustomDatetime", "d")
+'	
+'	'Caption
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "Caption", " ")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Parent", "Caption", "Assembly")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Location", "Caption", "Loc")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Product_Line", "Caption", "PL")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Description", "Caption", "Description")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Um_inventory", "Caption", "UM")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Code_sort", "Caption", "Buyer")
+'	
+'	'VisibleIndex
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Select", "VisibleIndex", v.Local.iVisibleIndex)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Parent", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Location", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Product_Line", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Description", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Um_inventory", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("assemblyGV", "Code_sort", "VisibleIndex", v.Local.iVisibleIndex.++)
+	
+	'****Customer
+'	v.Local.iCnt.Set(0)
+'	v.Local.iVisibleIndex.Set(0)
+'	v.Local.sFields.Redim(0,0)
+'	v.Local.sFields.Set("")
+'	
+'	f.Intrinsic.String.Split(v.DataTable.customerDT.FieldNames, "*!*", v.Local.sFields)
+'	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sFields.UBound, 1)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderFontBold", True)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "Visible", True)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "ReadOnly", True)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "AllowEdit", False)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderHAlignment", "Near")
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "CellHAlignment", "Near")
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderBackColor", v.Color.GSS)
+'		gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", v.Local.sFields(v.Local.iCnt), "HeaderForeColor", v.Color.White)
+'	f.Intrinsic.Control.Next(v.Local.iCnt)
+'	
+'	'GridView Properties
+'	gui.F_Param.GsGcSelect.BestFitColumns("customerGV")
+'	gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "OptionsViewColumnAutoWidth", False)
+'	'gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "OptionsViewShowAutoFilterRow", True)
+'	'gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "OptionsFindAlwaysVisible", True)
+'	'gui.F_Param.GsGcSelect.SetGridviewProperty("customerGV", "Showgrouppanel", True)
+'	
+'	'Possible Column Properties 
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "ReadOnly", False)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "AllowEdit", True)
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Default", "HeaderHAlignment", "Center")
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Default", "CellHAlignment", "Center")
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Default", "Caption", "Default")
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Default", "Visible", False)
+'	'gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Default", "DisplayCustomDatetime", "d")
+'	
+'	'VisibleIndex
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "VisibleIndex", v.Local.iVisibleIndex)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Customer", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Name_Customer", "VisibleIndex", v.Local.iVisibleIndex.++)
+'	
+'	'Caption
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Select", "Caption", " ")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Customer", "Caption", "Customer")
+'	gui.F_Param.GsGcSelect.SetColumnProperty("customerGV", "Name_Customer", "Caption", "Customer Name")
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.loadGridProperties.End
+
+Program.Sub.cmdExport_Click.Start
+v.Local.sLocalFilter.Declare
+v.Local.sText.Declare
+f.Intrinsic.Control.Try
+
+	f.Intrinsic.UI.InvokeWaitDialog("Exporting")
+
+	v.Global.sFilter.Set("")
+	
+	'Get Components
+	v.Local.sLocalFilter.Set("")
+	v.Local.sText.Set("")
+	v.Local.sText.Set(v.Screen.F_Param!txtComponent.Text)
+	f.Intrinsic.Control.If(v.Local.sText, <>, "")
+		f.Intrinsic.String.Replace(v.Local.sText, "*!*", "','", v.Local.sText)
+		f.Intrinsic.String.Build("bm.Part in ('{0}')", v.Local.sText, v.Local.sLocalFilter)
+		f.Intrinsic.String.Build("{0} and {1}", v.Global.sFilter, v.Local.sLocalFilter, v.Global.sFilter)
+	f.Intrinsic.Control.EndIf
+	'Get Assembly
+	v.Local.sLocalFilter.Set("")
+	v.Local.sText.Set("")
+	v.Local.sText.Set(v.Screen.F_Param!txtAssembly.Text)
+	f.Intrinsic.Control.If(v.Local.sText, <>, "")
+		f.Intrinsic.String.Replace(v.Local.sText, "*!*", "','", v.Local.sText)
+		f.Intrinsic.String.Build("bm.Parent in ('{0}')", v.Local.sText, v.Local.sLocalFilter)
+		f.Intrinsic.String.Build("{0} and {1}", v.Global.sFilter, v.Local.sLocalFilter, v.Global.sFilter)
+	f.Intrinsic.Control.EndIf
+	'Get Customer
+	v.Local.sLocalFilter.Set("")
+	v.Local.sText.Set("")
+	v.Local.sText.Set(v.Screen.F_Param!txtCustomer.Text)
+	f.Intrinsic.Control.If(v.Local.sText, <>, "")
+		f.Intrinsic.String.Replace(v.Local.sText, "*!*", "','", v.Local.sText)
+		f.Intrinsic.String.Build("bi.Customer in ('{0}')", v.Local.sText, v.Local.sLocalFilter)
+		f.Intrinsic.String.Build("{0} and {1}", v.Global.sFilter, v.Local.sLocalFilter, v.Global.sFilter)
+	f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.CallSub(pullData)
+
+	f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdExport_Click.End
+
+Program.Sub.pullData.Start
+v.Local.iCnt.Declare
+v.Local.sParent.Declare
+v.Local.sClass.Declare
+v.Local.sType.Declare
+v.Local.sPrefix.Declare
+v.Local.sSQL.Declare
+v.Local.sFilter.Declare
+f.Intrinsic.Control.Try
+'Try something
+'	'f.ODBC.Connection!con.OpenCompanyConnection	
+	
+		f.Intrinsic.String.Build("select bm.PARENT as FullParent, substring(bm.Parent, 1, 17) as ParentPart, substring(bm.Parent, 18, 3) as ParentRev, bm.Part as FullPart, substring(bm.Part, 1, 17) as Part, substring(bm.Part, 18, 3) as Rev, ima.DESCRIPTION, ima.UM_INVENTORY, ima.AMT_COST, ima.QTY_ORDER, ima.QTY_REORDER, ima.QTY_ONHAND, 0 AS VMI_QTY_ONHAND, 0 AS CUST_QTY, ima.QTY_REQUIRED, 0 AS XS_OH_QTY, 0 AS XS_OH_DOLLARS, CASE WHEN ima.CODE_SOURCE IN ('P','J','',' ') THEN ima.QTY_ONORDER_PO ELSE ima.QTY_ONORDER_WO END AS ON_ORDER, bi.PART_CLASS, bi.PART_TYPE, bi.NCNR, bi.CUST_PART, ima.Code_sort as Buyer_Type from v_bom_mstr bm left outer join v_inventory_all ima on bm.part=ima.part left outer join gcg_5786_bomimport bi on bi.part=bm.part where bm.Sequence_bom <> '0000' {0};", v.Global.sFilter, v.Local.sSQL)
+		
+		f.Data.Datatable.CreateFromSQL("excessDT", "con", v.Local.sSQL, True)
+		
+		f.Data.Dictionary.CreateFromSQL("codeSortDescDicT", "con", "select * from V_INV_SORT;")
+		f.Data.Dictionary.CreateFromSQL("customerDict", "con", "Select Part, Customer from V_INV_CROSS_REF;")
+		f.Data.Dictionary.CreateFromSQL("customerNameDict", "con", "Select Customer, Name_Customer from V_CUSTOMER_MASTER;")
+	'f.ODBC.Connection!con.Close
+	
+	f.Data.Datatable.AddExpressionColumn("excessDT", "reqBalance", "Float", "QTY_REQUIRED - QTY_ONHAND")
+	f.Data.Datatable.AddExpressionColumn("excessDT", "xs_OO", "Float", "ON_ORDER - reqBalance")
+	f.Data.Datatable.AddExpressionColumn("excessDT", "xs_OO_MMin", "Float", "xs_OO - QTY_ORDER")
+	f.Data.Datatable.AddExpressionColumn("excessDT", "minOrdFact", "Float", "IIF(xs_OO_MMin <= 0, 0, xs_OO_MMin/QTY_REORDER)")
+	
+	f.Data.Datatable.AddColumn("excessDT", "buyName", "string")
+	f.Data.Dictionary.SetDefaultReturn("codeSortDescDicT", " ")
+	f.Data.Datatable.FillFromDictionary("excessDT", "codeSortDescDicT", "buyer_type", "buyName")
+	f.Data.Dictionary.Close("codeSortDescDicT")
+	
+	f.Data.Datatable.AddColumn("excessDT", "customer", "string")
+	f.Data.Dictionary.SetDefaultReturn("customerDict", " ")
+	f.Data.Datatable.FillFromDictionary("excessDT", "customerDict", "FullParent", "customer")
+	f.Data.Dictionary.Close("customerDict")
+	
+	f.Data.Datatable.AddColumn("excessDT", "customerName", "string")
+	f.Data.Dictionary.SetDefaultReturn("customerNameDict", " ")
+	f.Data.Datatable.FillFromDictionary("excessDT", "customerNameDict", "Customer", "customerName")
+	f.Data.Dictionary.Close("customerNameDict")
+	
+	'Loop Through the Table and Get Class ant Types.
+	f.Intrinsic.Control.For(v.Local.iCnt, 0, v.DataTable.excessDT.RowCount--, 1)
+		'Get Parent Part
+		v.Local.sParent.Set(v.DataTable.excessDT(v.Local.iCnt).FullParent!FieldVal)
+		'Split the Prefix
+		f.Intrinsic.String.Split(v.Local.sParent, "-", v.Local.sPrefix)
+		'Get class and type
+		'f.ODBC.Connection!con.OpenCompanyConnection
+			f.Intrinsic.String.Build("select class_id from GCG_5787_CLASS_TYPE where prefix_char = '{0}-';", v.Local.sPrefix(0), v.Local.sSQL)
+			f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL, v.Local.sClass)
+			f.Intrinsic.String.Build("select type_id from GCG_5787_CLASS_TYPE where prefix_char = '{0}-';", v.Local.sPrefix(0), v.Local.sSQL)
+			f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL, v.Local.sType)
+		'f.ODBC.Connection!con.Close		
+		'Set Value3
+		f.Data.Datatable.SetValue("excessDT", v.Local.iCnt, "PART_CLASS", v.Local.sClass, "PART_TYPE", v.Local.sType)		
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+	
+	f.Data.DataView.Create("excessDT", "excessDV", 22)
+	f.Intrinsic.Control.If(v.Screen.F_Param!ddlPartSource.Value, =, "BUY")
+		v.Local.sFilter.Set("CODE_SOURCE = 'P'")
+	f.Intrinsic.Control.ElseIf(v.Screen.F_Param!ddlPartSource.Value, =, "MAKE")
+		v.Local.sFilter.Set("CODE_SOURCE = 'J'")
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("")
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.DataView.SetFilter("excessDT", "excessDV", v.Local.sFilter)
+	
+	gui.Form.GsGcExcess.AddGridviewFromDataview("excessGV", "excessDT", "excessDV")
+	gui.Form.GsGcExcess.MainView("excessGV")
+	'700-0000101
+	gui.Form.GsGcExcess.BestFitColumns("excessGV")
+	gui.Form.GsGcExcess.SetGridviewProperty("excessGV", "OptionsViewColumnAutoWidth", False)
+	
+	gui.Form..Show
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.pullData.End
+
+Program.Sub.newExport.Start
+v.Local.sCustomers.Declare
+v.Local.sAssemblies.Declare
+v.Local.sComponents.Declare
+v.Local.sLocalFilter.Declare
+v.Local.sList.Declare
+v.Local.iCnt.Declare
+v.Local.sSQL.Declare
+
+V.Local.sFilePath.Declare
+V.Local.sParams.Declare
+V.Local.sFieldNames.Declare
+V.Local.sTypes.Declare
+V.Local.sRet.Declare
+V.Local.sFile.Declare
+V.Local.sRetPart.Declare
+f.Intrinsic.Control.Try
+'Try something
+	v.Local.sCustomers.Set(v.Screen.F_Param!txtCustomer.Text)
+	v.Local.sAssemblies.Set(v.Screen.F_Param!txtAssembly.Text)
+	v.Local.sComponents.Set(v.Screen.F_Param!txtComponent.Text)
+	
+	V.Local.sFieldNames.Set("Line*!*Seq*!*Part*!*Description*!*Cat*!*Source*!*Qty*!*Qty_OnHand*!*Qty_OnOrder*!*Required*!*Net*!*RtrNet*!*Parent*!*LeadDays*!*LdDate*!*filler*!*UM*!*GSS_EXTRA_DESC*!*ParentFLAG")
+	V.Local.sTypes.Set("String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String")
+
+	f.Intrinsic.UI.InvokeWaitDialog("Exporting")
+
+	v.Global.sFilter.Set("")
+'	f.Data.Datatable.Create("partDT")
+'	f.Data.Datatable.AddColumn("partDT", "Part", "string","", 20)
+	
+	'Components run alone.
+	f.Intrinsic.Control.If(v.Local.sComponents.Trim, <>, "")
+		f.Intrinsic.String.Replace(v.Local.sComponents, "*!*", "','", v.Local.sComponents)
+		f.Intrinsic.String.Build("bm.Part in ('{0}')", v.Local.sComponents, v.Local.sLocalFilter)
+		f.Intrinsic.String.Build("{0} and {1}", v.Global.sFilter, v.Local.sLocalFilter, v.Global.sFilter)
+	f.Intrinsic.Control.Else	
+	'Runs just customers
+		f.Intrinsic.Control.If(v.Local.sAssemblies.Trim, =, "", AND, v.Local.sCustomers.Trim, <>, "")
+			f.Intrinsic.String.Replace(v.Local.sCustomers, "*!*", "','", v.Local.sCustomers)
+			f.Intrinsic.String.Build("bi.Customer in ('{0}')", v.Local.sCustomers, v.Local.sLocalFilter)
+			f.Intrinsic.String.Build("{0} and {1}", v.Global.sFilter, v.Local.sLocalFilter, v.Global.sFilter)
+	'Runs just Assemblies
+		f.Intrinsic.Control.ElseIf(v.Local.sAssemblies.Trim, <>, "", AND, v.Local.sCustomers.Trim, =, "")
+			f.Intrinsic.String.Split(v.Local.sAssemblies, "*!*", v.Local.sList)
+			f.Intrinsic.String.Replace(v.Local.sAssemblies, "*!*", "','", v.Local.sAssemblies)
+			
+			f.Intrinsic.Control.For(v.Local.iCnt, 0, v.Local.sList.UBound, 1)
+				F.Intrinsic.String.Build("{0}\BOM{1}", V.System.Temp, V.Caller.Terminal, V.Local.sFilePath)
+				F.Intrinsic.String.Build("0{0}{1}{0}{2}",V.Ambient.Tab, v.Local.sList(v.Local.iCnt), v.Local.sFilePath, V.Local.sParams)
+				F.Intrinsic.File.String2File(V.Local.sFilePath, V.Local.sParams)
+				F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+				
+				'f.Intrinsic.File.File2String(v.Local.sFilePath, v.Local.sFilePath)
+				F.Intrinsic.File.FiletoStringArray(V.Local.sFilePath,V.Ambient.Tab,V.Local.sRet)
+				V.Local.sRet.RedimPreserve(0,3)
+				F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet(3),V.Local.sFile.Trim)
+				F.Intrinsic.String.Split(V.Local.sFile," ",V.Local.sFile)
+				F.Intrinsic.String.Build("{0}\{1}",V.System.Temp,V.Local.sFile(0).Trim,V.Local.sFilePath)
+				
+				F.Intrinsic.File.File2String(V.Local.sFilePath,V.Local.sFilePath)
+
+				F.Data.DataTable.CreateFromString("DTTemp",V.Local.sFilePath,V.Local.sFieldNames,V.Local.sTypes,"|~|",v.ambient.newline,True)
+				f.Data.Datatable.AddColumn("DTTemp", "TRMNL", "string", v.Caller.Terminal)
+				'f.Data.DataView.Create("DTTemp", "DVTemp", 22, "Trim(Part) <> '' and Trim(Part) <> 'S70' and Trim(Part) <> 'Part Number'", "")
+				f.Data.DataView.Create("DTTemp", "DVTemp", 22, "Trim(Part) not in ('', 'S70', 'Part Number')", "")
+				f.Data.DataView.ToDataTableDistinct("DTTemp","DVTemp", "partDT", "TRMNL*!*PART")
+				f.Data.Datatable.SetValueFormat("partDT", -1, "Part", "Part", "")
+				
+				'f.ODBC.Connection!con.OpenCompanyConnection
+				 	f.Data.Datatable.SaveToDB("partDT", "con", "GCG_5995_TempPart", "TRMNL*!*PART",256, "TRMNL@!@TRMNL*!*Part@!@PART")
+				'f.ODBC.Connection!con.Close
+
+'				F.Global.Callwrapper.New("Test","Manufacturing.BOM.CostBuildup")
+'				F.Global.Callwrapper.SetProperty("Test","Program","RE0100")
+'				F.Global.Callwrapper.SetProperty("Test","Parent", v.Local.sList(v.Local.iCnt))
+'				'F.Global.Callwrapper.SetProperty("Test", "Flags", 1)
+'				F.Global.Callwrapper.SetProperty("Test", "UseBestOrderQty", True)
+'				F.Global.Callwrapper.SetProperty("Test", "UseStandardCostQty", True)
+'				F.Global.CallWrapper.Run("Test")
+'				
+'				f.Intrinsic.String.Build("select part from BI_BOM_BUILDUP_E where trmnl = '{0}' and rec_type = 'P'", v.Caller.Terminal, v.Local.sSQL)
+'				f.Data.Datatable.CreateFromSQL("tempPart", "con", v.Local.sSQL)
+'				f.Data.Datatable.Merge("tempPart", "partDT", false, 2)
+				f.Data.DataView.Close("DTTemp", "DVTemp")
+				f.Data.Datatable.Close("DTTemp")
+				f.Data.Datatable.Close("partDT")
+				
+			f.Intrinsic.Control.Next(v.Local.iCnt)
+			
+			'f.ODBC.Connection!con.OpenCompanyConnection
+				f.Intrinsic.String.Build("Select Distinct Part from GCG_5995_TempPart where TRMNL = '{0}'", v.Caller.Terminal, v.Local.sSQL)
+			 	f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,  v.Local.sRetPart)
+			 	f.Intrinsic.String.Replace(v.Local.sRetPart, "*!*", "','", v.Local.sRetPart)
+			'f.ODBC.Connection!con.Close
+			
+			f.Intrinsic.String.Build("bm.Parent in ('{0}')", v.Local.sRetPart, v.Local.sLocalFilter)
+			f.Intrinsic.String.Build("{0} and {1}", v.Global.sFilter, v.Local.sLocalFilter, v.Global.sFilter)
+	'Runs Customer and Assemblies
+		f.Intrinsic.Control.Else
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.If(v.Screen.F_Param!chkAll.Value, =, 1)
+			v.Global.sFilter.Set("")
+		f.Intrinsic.Control.EndIf
+		
+		f.Intrinsic.Control.CallSub(pullData)
+
+		f.Intrinsic.UI.CloseWaitDialog
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(ErrorMsg, CurrentSub, v.Ambient.CurrentSubroutine)
+f.Intrinsic.Control.EndTry
+Program.Sub.newExport.End
+
+
+#End Region ' ObsoleteCode
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$dduncan$}$20210412091454887$}$r0o+00bj735YsiGsQ60YIo/Zb+26OZQG21pIkAjD2cJfFzUKRSvF4x8Jsvv6UJItUQ6fVgwHgJE=
+Program.Sub.Comments.End
